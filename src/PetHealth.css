@@ -1,0 +1,12 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
+
+.pet-health-div{
+    max-width: 250px;
+    border: solid 5px black;
+    border-radius: 20px;
+    text-align: left;
+    padding: 10px;
+    height: 70vh;
+}
+

@@ -1,0 +1,11 @@
+.pet-bio-div{
+    width: 200px;
+    border: solid 5px black;
+    border-radius: 20px;
+    text-align: left;
+    padding: 10px;
+}
+
+.pet-bio-label{
+    font-weight: 900;
+}

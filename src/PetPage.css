@@ -1,0 +1,20 @@
+*{
+    box-sizing: border-box;
+}
+
+.pet-page-container{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    height: 95vh;
+    margin: 25px;
+}
+
+.pet-main-container{
+    display: grid;
+    grid-template-rows: 4fr 1fr;
+}
+
+.pet-img{
+    max-width: 650px;
+}
+
