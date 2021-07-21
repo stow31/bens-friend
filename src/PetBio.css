@@ -1,11 +1,18 @@
+.pet-bio-container{
+    margin: auto;
+}
+
 .pet-bio-div{
-    width: 200px;
+    width: 300px;
     border: solid 5px black;
     border-radius: 20px;
     text-align: left;
     padding: 10px;
+    background-color: #ffffffb0;
+    box-shadow: inset -1px 1px 2px #000, inset 1px -1px 2px #000, 4px 4px 2px rgb(0 0 0 / 20%);
+    border: none;
 }
 
 .pet-bio-label{
-    font-weight: 900;
+    font-weight: 800;
 }

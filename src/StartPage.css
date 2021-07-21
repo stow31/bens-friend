@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;800&display=swap');
+
+
+body{
+    background-image: url('./assets/pets-background.jpg');
+    font-family: 'Raleway', sans-serif;
+}
+
+.homepage-content-div{
+    width: 60%;
+    position: absolute;
+    bottom: 30%;
+    right: 0;
+    padding: 10px;
+}
+
+.homepage-content-text{
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.homepage-input{
+    height: 35px;
+    width: 190px;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+.homepage-btn{
+    display: block;
+    background-color: #D48523;
+    margin: 20px auto;
+    border-radius: 25px;
+    height: 40px;
+    font-family: 'Raleway', sans-serif;
+    width: 194px;
+    /* box-shadow: inset -1px 1px 2px #000, inset 1px -1px 2px #000, 4px 4px 2px rgb(0 0 0 / 20%); */
+    border: none;
+    cursor: pointer;
+}
+
+.homepage-btn:hover{
+    box-shadow: inset -1px 1px 2px #000, inset 1px -1px 2px #000, 4px 4px 2px rgb(0 0 0 / 20%);
+}

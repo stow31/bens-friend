@@ -9,7 +9,7 @@ function PetBio(){
     return(
         <div className='pet-bio-div'>
             <p><span className="pet-bio-label">Pet Name: </span>{petName}</p>
-            <p><span className="pet-bio-label">Pet Age: </span>{petAge}</p>
+            {/* <p><span className="pet-bio-label">Pet Age: </span>{petAge}</p> */}
         </div>
     )
 }

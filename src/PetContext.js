@@ -8,15 +8,18 @@ export function PetProvider(props){
 
     const [petAge, setPetAge] = useState(localStorage.getItem('petAge'))
 
-    const [progress, setProgress] = useState(0);
+    const [isAsleep, setIsAsleep] = useState(false)
 
     return <PetContext.Provider value={{
         setPetAge, 
         setPetName, 
-        setProgress,
+        isAsleep,
         petName, 
-        petAge, 
-        progress}}>
+        petAge,
+        setIsAsleep
+        }}>
         {props.children}
     </PetContext.Provider>
 }
+
+

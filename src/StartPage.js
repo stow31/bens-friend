@@ -1,5 +1,6 @@
 import { PetContext } from './PetContext'
 import { useContext } from 'react'
+import PetsLogo from './assets/logo.png'
 import './StartPage.css'
 
 function StartPage(){
@@ -16,14 +17,14 @@ function StartPage(){
     }
 
     return(
-        <div>
-            <h1>Bens' Friend</h1>
-            <p>
-                Not allowed a real pet yet? Show your friends and family you're ready for the responsability to have a Bens' Friend by looking after your own virtual Bens' Friend
+        <div className="homepage-content-div">
+            <img src={PetsLogo} alt="" />
+            <p className="homepage-content-text">
+                Not allowed a real pet yet? <br/>Show your friends and family you're ready for the responsability to have a Bens' Friend by looking after your own virtual Bens' Friend
             </p>
             <form onSubmit={createPet}>
-                <input type="text" />
-                <button>Create My Bens' Friend</button>
+                <input placeholder="Enter Your Pets Name" className="homepage-input" type="text" />
+                <button className="homepage-btn">Create My Bens' Friend</button>
             </form>
         </div>
     )

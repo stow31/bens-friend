@@ -1,0 +1,21 @@
+.game-over-container{
+    text-align: center;
+}
+
+.new-game-btn{
+    display: block;
+    background-color: #D48523;
+    margin: 20px auto;
+    border-radius: 25px;
+    height: 40px;
+    font-family: 'Raleway', sans-serif;
+    width: 228px;
+    /* box-shadow: inset -1px 1px 2px #000, inset 1px -1px 2px #000, 4px 4px 2px rgb(0 0 0 / 20%); */
+    border: none;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+.new-game-btn:hover{
+    box-shadow: inset -1px 1px 2px #000, inset 1px -1px 2px #000, 4px 4px 2px rgb(0 0 0 / 20%);
+}

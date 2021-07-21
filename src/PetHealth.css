@@ -1,12 +1,48 @@
 
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
-
 .pet-health-div{
     max-width: 250px;
-    border: solid 5px black;
     border-radius: 20px;
     text-align: left;
     padding: 10px;
     height: 70vh;
+    background-color: #ffffffb0;
+    box-shadow: inset -1px 1px 2px #000, inset 1px -1px 2px #000, 4px 4px 2px rgb(0 0 0 / 20%);
+    border: none;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
+
+.health-heading{
+    font-weight: 800;
+    text-align: center;
+}
+
+.health-btn {
+    display: block;
+    background-color: #D48523;
+    margin: 20px auto;
+    border-radius: 25px;
+    height: 40px;
+    font-family: 'Raleway', sans-serif;
+    width: 194px;
+    border: none;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 12px;
+}
+
+.health-btn:hover {
+    box-shadow: inset -1px 1px 2px #000, inset 1px -1px 2px #000, 4px 4px 2px rgb(0 0 0 / 20%);
+}
+
+.pop-up{
+    position: absolute;
+    top: 10%;
+    left: 25%;
+    display: grid;
+    grid-template-rows: 0.5fr 4fr;
+}
+
 

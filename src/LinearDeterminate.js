@@ -1,34 +1,46 @@
-import React from 'react';
-import { PetContext } from './PetContext.js';
+import React, { useState, useEffect, useRef } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import LinearProgress from '@material-ui/core/LinearProgress';
+
+function useInterval(callback, delay) {
+  const savedCallback = useRef();
+
+  // Remember the latest callback.
+  useEffect(() => {
+    savedCallback.current = callback;
+  }, [callback]);
+
+  // Set up the interval.
+  useEffect(() => {
+    function tick() {
+      savedCallback.current();
+    }
+    if (delay !== null) {
+      let id = setInterval(tick, delay);
+      return () => clearInterval(id);
+    }
+  }, [delay]);
+}
 
 const useStyles = makeStyles({
   root: {
     width: '100%',
+    
   },
 });
 
-export default function LinearDeterminate() {
+
+function LinearDeterminate(props) {
   const classes = useStyles();
+  let progressRate = Number(props.progressRate);
+  let progress = Number(props.progress)
+  let setProgress = props.setProgress
 
-  const {progress, setProgress} = React.useContext(PetContext)
-
-  React.useEffect(() => {
-    const timer = setInterval(() => {
-      setProgress((oldProgress) => {
-        if (oldProgress === 100) {
-          return 0;
-        }
-        const diff = Math.random() * 10;
-        return Math.min(oldProgress + diff, 100);
-      });
-    }, 500);
-
-    return () => {
-      clearInterval(timer);
-    };
-  }, []);
+  useInterval(() => {
+    setProgress( (oldProgress) => {
+      return Math.min(oldProgress - progressRate, 100);
+    })
+  }, 100);
 
   return (
     <div className={classes.root}>
@@ -36,3 +48,5 @@ export default function LinearDeterminate() {
     </div>
   );
 }
+
+export default LinearDeterminate

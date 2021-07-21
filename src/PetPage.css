@@ -4,17 +4,28 @@
 
 .pet-page-container{
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 3fr 2fr;
     height: 95vh;
-    margin: 25px;
+    width: 67%;
+    margin: 31px auto;
+}
+
+.pet-container{
+    position: relative;
 }
 
 .pet-main-container{
     display: grid;
-    grid-template-rows: 4fr 1fr;
+    grid-template-rows: 1fr 4fr;
 }
 
 .pet-img{
-    max-width: 650px;
+    max-width: 600px;
+    background-color: #ffffff6b;
+    border-radius: 50%;
+}
+
+.pet-aside-container{
+    margin: auto
 }
 
