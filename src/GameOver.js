@@ -16,7 +16,7 @@ function GameOver(){
             <h1>GAME OVER</h1>
             <p>
                 Oh no {petName} has gone 
-                to doggy heaven maybe you should stick 
+                to heaven maybe you should stick 
                 to house plants?
             </p>
             <button onClick={handleRest} className="new-game-btn">

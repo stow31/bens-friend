@@ -5,16 +5,30 @@ import './StartPage.css'
 
 function StartPage(){
 
-    const { setPetAge, setPetName } = useContext(PetContext)
+    const { setPetAge, setPetName, petType, setPetType } = useContext(PetContext)
     const [popUpVisable, setPopUpVisable] = useState("hide")
 
     const createPet = (e) =>{
         e.preventDefault()
-        localStorage.setItem('petName', e.target[0].value)
+        localStorage.setItem('petName', e.target.parentElement.previousSibling.value)
         setPetName( localStorage.getItem('petName') )
 
         localStorage.setItem('petAge', new Date().getDay)
         setPetAge( localStorage.getItem('petAge') )
+
+        if (e.target.innerHTML === 'Create Dog'){
+
+            localStorage.setItem('petType', 'dog')
+            setPetType( localStorage.getItem('petType') )
+
+        } else if (e.target.innerHTML === 'Create Cat'){
+
+            localStorage.setItem('petType', 'cat')
+            setPetType( localStorage.getItem('petType') )
+            
+        }
+
+        // console.log("blah")
     }
 
     const handleInstructions = () =>{
@@ -35,9 +49,12 @@ function StartPage(){
                 <p className="homepage-content-text">
                     Show your friends and family you're ready for the responsability to have a Bens' Friend by looking after your own virtual Bens' Friend
                 </p>
-                <form onSubmit={createPet}>
+                <form >
                     <input placeholder="Enter Your Pets Name" className="homepage-input" type="text" />
-                    <button className="homepage-btn">Create My Bens' Friend</button>
+                    <div onClick={createPet}>
+                        <button className="homepage-btn">Create Dog</button>
+                        <button className="homepage-btn">Create Cat</button>
+                    </div>
                 </form>
                 <button onClick={handleInstructions} className="instructions-btn">See Instructions</button>
 

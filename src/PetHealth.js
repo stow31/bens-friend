@@ -50,7 +50,7 @@ function PetHealth(){
             setBtnStatus("")
         } else {
             setSleepBtnText(`Wake ${petName} Up`)
-            setSleepProgressRate(-0.4)
+            setSleepProgressRate(-0.6)
             setIsAsleep(true)
             setBtnStatus("true")
         }
@@ -106,7 +106,7 @@ function PetHealth(){
                     <p className="health-heading">Potty</p>
                     <LinearDeterminate 
                         health="bladder" 
-                        progressRate="0.6"
+                        progressRate="0.4"
                         progress={bladderProgress}
                         setProgress={setBladderProgress} />
                     <button 

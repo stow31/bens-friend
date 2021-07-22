@@ -29,16 +29,18 @@ body{
     width: 190px;
     text-align: center;
     font-family: 'Raleway', sans-serif;
+    display: block;
+    margin: 0 auto;
 }
 
 .homepage-btn{
-    display: block;
+    display: inline;
     background-color: #D48523;
-    margin: 20px auto;
+    margin: 20px 20px;
     border-radius: 25px;
     height: 40px;
     font-family: 'Raleway', sans-serif;
-    width: 224px;
+    width: 169px;
     border: none;
     cursor: pointer;
     font-weight: 800;
