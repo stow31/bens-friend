@@ -4,10 +4,11 @@
 
 .pet-page-container{
     display: grid;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 4fr 3fr;
     height: 95vh;
-    width: 67%;
+    width: 80%;
     margin: 31px auto;
+    grid-gap: 50px;
 }
 
 .pet-container{
@@ -15,17 +16,19 @@
 }
 
 .pet-main-container{
-    display: grid;
-    grid-template-rows: 1fr 4fr;
+    margin: auto;
 }
 
 .pet-img{
-    max-width: 600px;
-    background-color: #ffffff6b;
+    max-width: 650px;
+    background-color: #ffffffab;
     border-radius: 50%;
+    height: 650px;
 }
 
 .pet-aside-container{
-    margin: auto
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 1fr 4fr;
 }
 

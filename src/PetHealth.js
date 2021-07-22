@@ -11,7 +11,9 @@ function PetHealth(){
     const { 
         petName,
         isAsleep,
-        setIsAsleep
+        setIsAsleep,
+        isGameOver,
+        setIsGameOver
     } = useContext(PetContext)
 
     const [hungerProgress, setHungerProgress] = useState(100)
@@ -22,7 +24,7 @@ function PetHealth(){
     const [sleepProgressRate, setSleepProgressRate] = useState(0.2)
     const [sleepBtnText, setSleepBtnText] = useState(`Put ${petName} to Bed`)
     const [funVisable, setFunVisable] = useState("hide")
-    let isGameOver = false;     
+    const [btnStatus, setBtnStatus] = useState("")
 
     const handleHunger = () => {
         if (foodVisable === "hide"){
@@ -45,10 +47,12 @@ function PetHealth(){
             setSleepBtnText(`Put ${petName} to Bed`)
             setSleepProgressRate(0.2)
             setIsAsleep(false)
+            setBtnStatus("")
         } else {
             setSleepBtnText(`Wake ${petName} Up`)
             setSleepProgressRate(-0.2)
             setIsAsleep(true)
+            setBtnStatus("true")
         }
     }
 
@@ -58,7 +62,7 @@ function PetHealth(){
 
     const checkForDeath = () => {
         if(hungerProgress < 0 && sleepProgress < 0 && bladderProgress < 0 && funProgress < 0){
-            isGameOver = true
+            setIsGameOver(true)
         }
     }
 
@@ -75,8 +79,14 @@ function PetHealth(){
                         health="hunger" 
                         progressRate="0.3"
                         progress={hungerProgress}
-                        setProgress={setHungerProgress} />
-                    <button onClick={handleHunger} className="health-btn">Feed {petName}</button>
+                        setProgress={setHungerProgress} 
+                    />
+                    <button 
+                        onClick={handleHunger} className="health-btn"
+                        disabled={btnStatus}
+                    >
+                            Feed {petName}
+                    </button>
                 </div>
                 <div className="sleep-div">
                     <p className="health-heading">Sleep</p>
@@ -84,8 +94,13 @@ function PetHealth(){
                         health="sleep" 
                         progressRate={sleepProgressRate}
                         progress={sleepProgress}
-                        setProgress={setSleepProgress} />
-                    <button onClick={handleSleep} className="health-btn">{sleepBtnText}</button>
+                        setProgress={setSleepProgress} 
+                    />
+                    <button 
+                        onClick={handleSleep} className="health-btn"
+                    >
+                        {sleepBtnText}
+                    </button>
                 </div>
                 <div className="bladder-div">
                     <p className="health-heading">Potty</p>
@@ -94,7 +109,12 @@ function PetHealth(){
                         progressRate="0.7"
                         progress={bladderProgress}
                         setProgress={setBladderProgress} />
-                    <button onClick={handleBladder} className="health-btn">Take {petName} to the bathroom</button>
+                    <button 
+                        onClick={handleBladder} className="health-btn"
+                        disabled={btnStatus}
+                    >
+                        Take {petName} to the Bathroom
+                    </button>
                 </div>
                 <div className="fun-div">
                     <p className="health-heading">Play</p>
@@ -103,7 +123,12 @@ function PetHealth(){
                         progressRate="0.1"
                         progress={funProgress}
                         setProgress={setFunProgress} />
-                    <button onClick={handleFun} className="health-btn">Play with {petName}</button>
+                    <button 
+                        onClick={handleFun} className="health-btn"
+                        disabled={btnStatus}
+                    >
+                        Play with {petName}
+                    </button>
                 </div>
 
                 <div className="pop-up">

@@ -10,13 +10,17 @@ export function PetProvider(props){
 
     const [isAsleep, setIsAsleep] = useState(false)
 
+    const [isGameOver, setIsGameOver] = useState(false)
+
     return <PetContext.Provider value={{
         setPetAge, 
         setPetName, 
         isAsleep,
         petName, 
         petAge,
-        setIsAsleep
+        setIsAsleep,
+        isGameOver,
+        setIsGameOver
         }}>
         {props.children}
     </PetContext.Provider>
