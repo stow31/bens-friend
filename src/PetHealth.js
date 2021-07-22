@@ -50,7 +50,7 @@ function PetHealth(){
             setBtnStatus("")
         } else {
             setSleepBtnText(`Wake ${petName} Up`)
-            setSleepProgressRate(-0.2)
+            setSleepProgressRate(-0.4)
             setIsAsleep(true)
             setBtnStatus("true")
         }
@@ -61,7 +61,7 @@ function PetHealth(){
     }
 
     const checkForDeath = () => {
-        if(hungerProgress < 0 && sleepProgress < 0 && bladderProgress < 0 && funProgress < 0){
+        if(hungerProgress < 10 && sleepProgress < 10 && bladderProgress < 10 && funProgress < 5){
             setIsGameOver(true)
         }
     }
@@ -106,7 +106,7 @@ function PetHealth(){
                     <p className="health-heading">Potty</p>
                     <LinearDeterminate 
                         health="bladder" 
-                        progressRate="0.7"
+                        progressRate="0.6"
                         progress={bladderProgress}
                         setProgress={setBladderProgress} />
                     <button 

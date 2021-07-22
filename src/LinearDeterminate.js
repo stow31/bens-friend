@@ -5,12 +5,10 @@ import LinearProgress from '@material-ui/core/LinearProgress';
 function useInterval(callback, delay) {
   const savedCallback = useRef();
 
-  // Remember the latest callback.
   useEffect(() => {
     savedCallback.current = callback;
   }, [callback]);
 
-  // Set up the interval.
   useEffect(() => {
     function tick() {
       savedCallback.current();
