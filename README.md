@@ -28,6 +28,6 @@ Create and look after your own pet! Maintain your pets health by taking it to th
 
 ## Screenshots
 
-![ScreenShot1](./src/assets/home-page.png)
-![ScreenShot1](./src/assets/pet-page.png)
+![ScreenShot 1](https://github.com/stow31/bens-friend/blob/main/src/assets/home-page.png)
+![ScreenShot 2](https://github.com/stow31/bens-friend/blob/main/src/assets/pet-page.png)
 
