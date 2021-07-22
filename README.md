@@ -2,7 +2,7 @@
 
 URL: http://bensfriend.surge.sh/
 
-Built using React
+Built using React & made use of material-ui for progress bars
 
 ## Purpose
 

@@ -120,7 +120,7 @@ function PetHealth(){
                     <p className="health-heading">Play</p>
                     <LinearDeterminate 
                         health="fun" 
-                        progressRate="0.1"
+                        progressRate="0.3"
                         progress={funProgress}
                         setProgress={setFunProgress} />
                     <button 

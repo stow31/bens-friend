@@ -63,8 +63,8 @@ function StartPage(){
                 <div onClick={handleInstructions} className="exit-row">X</div>   
                 <div>
                     <ol className="instruction-list">
-                        <li>Enter Your Pet’s Name and Click Create My Best Friend Button</li>
-                        <li>You need to keep your Best Friend alive now!</li>
+                        <li>Enter Your Pet’s Name and click either create a Dog or Cat</li>
+                        <li>Now you need to keep your Best Friend alive!</li>
                         <li>When each bar gets low you will need to either feed your pet, put them to bed, take them to the toilet or play with them.</li>
                         <li>If all progress bars get too low your pet will die.</li>
                     </ol>
